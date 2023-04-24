@@ -11,20 +11,20 @@ function getComputerChoice() {
 let computerSelection = getComputerChoice();
 console.log(computerSelection);
 
-
+ function playRound(playerSelection, computerSelection){
   if ((playerSelection.toLowerCase() === 'rock') && (computerSelection=== 'Rock') 
   || (playerSelection.toLowerCase()=== 'paper') && (computerSelection === 'Paper')
   || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection==='Scissors')) {
-    console.log ('it is a tie');
+    return 'it is a tie'
   }
   else if ((playerSelection.toLowerCase()=== 'rock') && (computerSelection=== 'Paper')
   || (playerSelection.toLowerCase()=== 'paper') && (computerSelection=== 'Scissors')
   || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection=== 'Rock')) {
-    console.log('you lose');
+    return 'you lose'
   }
-  else {console.log('you win');}
-  
-   
+  else {return 'you win'}
+}
+   console.log(playRound(playerSelection,computerSelection));
 
 
 
