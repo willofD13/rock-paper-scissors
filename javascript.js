@@ -3,21 +3,29 @@ console.log(playerSelection);
 
 let items = ['Rock', 'Paper', 'Scissors'];
 
-let computerSelection = getComputerChoice();
+
 
 function getComputerChoice() {
   return items[Math.floor(Math.random()*items.length)]
 }
-console.log(getComputerChoice());
+let computerSelection = getComputerChoice();
+console.log(computerSelection);
 
-function playerRound(playerSelection,computerSelection) {
-  if (playerSelection.toLowerCase === 'rock' && computerSelection=== 'Rock' 
-  || playerSelection=== 'paper' && computerSelection === 'Paper'
-  || playerSelection=== 'scissors' && computerSelection==='Scissors') {
-    return 'It is a tie!'
+
+  if ((playerSelection.toLowerCase() === 'rock') && (computerSelection=== 'Rock') 
+  || (playerSelection.toLowerCase()=== 'paper') && (computerSelection === 'Paper')
+  || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection==='Scissors')) {
+    console.log ('it is a tie');
   }
-}
-console.log(playerRound(playerSelection,computerSelection));
+  else if ((playerSelection.toLowerCase()=== 'rock') && (computerSelection=== 'Paper')
+  || (playerSelection.toLowerCase()=== 'paper') && (computerSelection=== 'Scissors')
+  || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection=== 'Rock')) {
+    console.log('you lose');
+  }
+  else {console.log('you win');}
+  
+   
+
 
 
 
