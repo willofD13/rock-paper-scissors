@@ -1,4 +1,8 @@
-let playerSelection = prompt('Enter your choice', '');
+function game(){
+function getPlayerChoice() {
+  return prompt('Enter your Choice' ,'');
+}
+let playerSelection = getPlayerChoice();
 console.log(playerSelection);
 
 let items = ['Rock', 'Paper', 'Scissors'];
@@ -24,7 +28,18 @@ console.log(computerSelection);
   }
   else {return 'you win'}
 }
-   console.log(playRound(playerSelection,computerSelection));
+console.log(playRound(playerSelection,computerSelection));
+}
+game();
+game();
+game();
+game();
+game();
+
+
+   
+
+   
 
 
 
