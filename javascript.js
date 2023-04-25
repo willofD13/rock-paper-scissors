@@ -25,9 +25,11 @@
     else if ((playerSelection.toLowerCase()=== 'rock') && (computerSelection=== 'Paper')
     || (playerSelection.toLowerCase()=== 'paper') && (computerSelection=== 'Scissors')
     || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection=== 'Rock')) {
+      computerScore++
       return 'you lose'
     }
-    else {return 'you win'}
+    else { playerScore++
+      return 'you win'}
   }
 
  console.log(playRound(playerSelection,computerSelection));
