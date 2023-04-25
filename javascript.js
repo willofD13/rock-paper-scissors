@@ -38,6 +38,13 @@
  console.log(playRound(playerSelection,computerSelection));
  console.log(playRound(playerSelection,computerSelection));
 
+ if (computerScore>playerScore) {
+  console.log('You lost!');
+ }
+ else if(computerScore<playerScore) {
+  console.log('You won!');
+ }
+ else{console.log('TIE!')}
   
   
   
