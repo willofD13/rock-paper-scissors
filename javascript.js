@@ -1,21 +1,21 @@
-function game() {
   function getPlayerChoice() {
     return prompt('Enter your Choice' ,'');
   }
-  let playerSelection = getPlayerChoice();
-  console.log(playerSelection);
+  let playerSelection;
+
   
   let items = ['Rock', 'Paper', 'Scissors'];
-  
-  
-  
   function getComputerChoice() {
     return items[Math.floor(Math.random()*items.length)]
   }
-  let computerSelection = getComputerChoice();
-  console.log(computerSelection);
+  let computerSelection;
+  
   
    function playRound(playerSelection, computerSelection){
+    playerSelection = getPlayerChoice();
+    console.log(playerSelection);
+    computerSelection=getComputerChoice();
+    console.log(computerSelection);
     if ((playerSelection.toLowerCase() === 'rock') && (computerSelection=== 'Rock') 
     || (playerSelection.toLowerCase()=== 'paper') && (computerSelection === 'Paper')
     || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection==='Scissors')) {
@@ -28,11 +28,18 @@ function game() {
     }
     else {return 'you win'}
   }
+
+ playRound(playerSelection,computerSelection);
+ playRound(playerSelection,computerSelection);
+ playRound(playerSelection,computerSelection);
+ playRound(playerSelection,computerSelection);
+ playRound(playerSelection,computerSelection);
+
   
   
-  let result = playRound(playerSelection,computerSelection);
-  console.log(result);
-}
+  
+
+
   
   
   
