@@ -9,6 +9,9 @@
     return items[Math.floor(Math.random()*items.length)]
   }
   let computerSelection;
+
+  let computerScore;
+  let playerScore;
   
   
    function playRound(playerSelection, computerSelection){
