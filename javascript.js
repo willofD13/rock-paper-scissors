@@ -16,9 +16,7 @@
     console.log(playerSelection);
     computerSelection=getComputerChoice();
     console.log(computerSelection);
-    if ((playerSelection.toLowerCase() === 'rock') && (computerSelection=== 'Rock') 
-    || (playerSelection.toLowerCase()=== 'paper') && (computerSelection === 'Paper')
-    || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection==='Scissors')) {
+    if (playerSelection.toLowerCase()===computerSelection.toLowerCase()) {
       return 'it is a tie'
     }
     else if ((playerSelection.toLowerCase()=== 'rock') && (computerSelection=== 'Paper')
@@ -29,11 +27,11 @@
     else {return 'you win'}
   }
 
- playRound(playerSelection,computerSelection);
- playRound(playerSelection,computerSelection);
- playRound(playerSelection,computerSelection);
- playRound(playerSelection,computerSelection);
- playRound(playerSelection,computerSelection);
+ console.log(playRound(playerSelection,computerSelection));
+ console.log(playRound(playerSelection,computerSelection));
+ console.log(playRound(playerSelection,computerSelection));
+ console.log(playRound(playerSelection,computerSelection));
+ console.log(playRound(playerSelection,computerSelection));
 
   
   
