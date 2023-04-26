@@ -10,8 +10,8 @@
   }
   let computerSelection;
 
-  let computerScore;
-  let playerScore;
+  let computerScore=0;
+  let playerScore=0;
   
   
    function playRound(playerSelection, computerSelection){
@@ -24,12 +24,37 @@
     }
     else if ((playerSelection.toLowerCase()=== 'rock') && (computerSelection=== 'Paper')
     || (playerSelection.toLowerCase()=== 'paper') && (computerSelection=== 'Scissors')
-    || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection=== 'Rock')) {
-      computerScore++
-      return 'you lose'
-    }
-    else { playerScore++
-      return 'you win'}
+    || (playerSelection.toLowerCase()=== 'scissors') && (computerSelection=== 'Rock')) 
+     { computerScore++
+      if (computerScore===1) {
+        return 'First round lost'
+      }
+      else if (computerScore===2) {
+        return 'Another one gone'
+      }
+      else if (computerScore===3) {
+        return 'It is okay. Go for the next one!'
+      }
+      else if (computerScore===4) {
+        return 'Do not let it happen!'
+      }
+      else {return 'The end'}
+    
+    }else { playerScore++
+      if (playerScore===1) {
+        return 'One down four to go'
+      }
+      else if (playerScore===2) {
+        return 'Good job!'
+      }
+      else if (playerScore===3) {
+        return 'Come on. You got this'
+      }
+      else if(playerScore===4) {
+        return 'Matchpoint'
+      }
+      else {return 'The end'}
+      }
   }
 
  console.log(playRound(playerSelection,computerSelection));
