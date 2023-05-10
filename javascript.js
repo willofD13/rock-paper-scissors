@@ -19,16 +19,27 @@
   const body = document.querySelector('body');
   body.appendChild(div);
   
-  const buttons = document.querySelectorAll('.buttons');
-  buttons.forEach( (button) => {
-    button.addEventListener('click', playRound);
-  });
+ 
   
   
   
   function getPlayerChoice() {
+    const a = document.querySelector('.rock');
+    a.addEventListener('click', () => {
+      console.log(a.textContent);
+    });
 
-  }
+    const b = document.querySelector('.paper');
+    b.addEventListener('click', () => {
+      console.log(b.textContent);
+    });
+    
+    const c = document.querySelector('.scissors');
+    c.addEventListener('click', () => {
+      console.log(c.textContent);
+    });
+  };
+  getPlayerChoice();
     
   let playerSelection;
 
@@ -94,7 +105,7 @@
  else if(computerScore<playerScore) {
   console.log('You won!');
  }
- else{console.log('TIE!')}
+ //else{console.log('TIE!')}
   
   
   
