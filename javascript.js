@@ -16,7 +16,15 @@ scissors.textContent = 'scissors';
 body.appendChild(scissors);
 
 const div = document.createElement('div')
-body.appendChild(div);
+body.appendChild(div); //here we will see the results
+
+const div2 = document.createElement('div');
+div2.textContent = '0'
+body.appendChild(div2)
+
+const div3 = document.createElement('div')
+div3.textContent = '0'
+body.appendChild(div3)
 
 
 const buttons = document.querySelectorAll('button');
