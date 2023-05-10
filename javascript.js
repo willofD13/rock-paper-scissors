@@ -1,23 +1,23 @@
-const div = document.createElement('div');
-div.classList.add('buttons');
+const body = document.querySelector('body');
 
 const rock = document.createElement('button');
 rock.classList.add('rock');
 rock.textContent = 'rock';
-div.appendChild(rock);
+body.appendChild(rock);
 
 const paper = document.createElement('button');
 paper.classList.add('paper');
 paper.textContent = 'paper';
-div.appendChild(paper);
+body.appendChild(paper);
 
 const scissors = document.createElement('button');
 scissors.classList.add('scissors');
 scissors.textContent = 'scissors';
-div.appendChild(scissors);
+body.appendChild(scissors);
 
-const body = document.querySelector('body');
+const div = document.createElement('div')
 body.appendChild(div);
+
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach( (button) => {
@@ -41,49 +41,52 @@ let playerScore=0;
   computerSelection=getComputerChoice();
   console.log(computerSelection);
   if (playerSelection===computerSelection.toLowerCase()) {
-    return 'it is a tie'
+    const result = document.querySelector('div');
+      result.textContent ='it is a tie';
   }
   else if ((playerSelection=== 'rock') && (computerSelection=== 'Paper')
   || (playerSelection=== 'paper') && (computerSelection=== 'Scissors')
   || (playerSelection=== 'scissors') && (computerSelection=== 'Rock')) 
    { computerScore++
     if (computerScore===1) {
-      return 'First round lost'
+      const result = document.querySelector('div');
+      result.textContent = 'First round lost';
     }
     else if (computerScore===2) {
-      return 'Another one gone'
+      const result = document.querySelector('div');
+      result.textContent = 'Another one gone'
     }
     else if (computerScore===3) {
-      return 'It is okay. Go for the next one!'
+      const result = document.querySelector('div');
+      result.textContent = 'It is okay. Go for the next one!'
     }
     else if (computerScore===4) {
-      return 'Do not let it happen!'
-    }
-    else {return 'The end'}
+      const result = document.querySelector('div');
+      result.textContent = 'Do not let it happen!'
+    } else {const result = document.querySelector('div');
+            result.textContent ='You lost!';}
   
-  }else { playerScore++
+  } else { playerScore++
     if (playerScore===1) {
-      return 'One down four to go'
+      const result = document.querySelector('div');
+      result.textContent = 'One down four to go'
     }
     else if (playerScore===2) {
-      return 'Good job!'
+      const result = document.querySelector('div');
+      result.textContent ='Good job!'
     }
     else if (playerScore===3) {
-      return 'Come on. You got this'
+      const result = document.querySelector('div');
+      result.textContent = 'Come on. You got this'
     }
     else if(playerScore===4) {
-      return 'Matchpoint'
-    }
-    else {return 'The end'}
-    }
-  }
-    if (computerScore>playerScore) {
-console.log('You lost!');
-}
-else if(computerScore<playerScore) {
-console.log('You won!');
-}
-else{console.log('TIE!')}
+      const result = document.querySelector('div');
+      result.textContent = 'Matchpoint'
+    } else {const result = document.querySelector('div');
+            result.textContent ='You win!!';}
+    };
+  };
+  
 
 
   
