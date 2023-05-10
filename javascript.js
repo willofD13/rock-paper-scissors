@@ -1,26 +1,27 @@
-  const buttons = document.createElement('div');
-  buttons.classList.add('buttons');
+  const div = document.createElement('div');
+  div.classList.add('buttons');
 
   const rock = document.createElement('button');
   rock.classList.add('rock');
   rock.textContent = 'rock';
-  buttons.appendChild(rock);
+  div.appendChild(rock);
 
   const paper = document.createElement('button');
   paper.classList.add('paper');
   paper.textContent = 'paper';
-  buttons.appendChild(paper);
+  div.appendChild(paper);
 
   const scissors = document.createElement('button');
   scissors.classList.add('scissors');
   scissors.textContent = 'scissors';
-  buttons.appendChild(scissors);
+  div.appendChild(scissors);
   
   const body = document.querySelector('body');
-  body.appendChild(buttons);
-
-  buttons.forEach( button => {
-    button.addEventListener('click', playRound)
+  body.appendChild(div);
+  
+  const buttons = document.querySelectorAll('.buttons');
+  buttons.forEach( (button) => {
+    button.addEventListener('click', playRound);
   });
   
   
