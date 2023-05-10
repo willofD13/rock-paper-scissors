@@ -19,10 +19,12 @@ const div = document.createElement('div')
 body.appendChild(div); //here we will see the results
 
 const div2 = document.createElement('div');
+div2.classList.add('player')
 div2.textContent = '0'
 body.appendChild(div2)
 
 const div3 = document.createElement('div')
+div3.classList.add('pc')
 div3.textContent = '0'
 body.appendChild(div3)
 
@@ -43,7 +45,7 @@ let computerScore=0;
 let playerScore=0;
 
 
- function playRound(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
   playerSelection = this.textContent ;
   console.log(playerSelection);
   computerSelection=getComputerChoice();
@@ -59,42 +61,61 @@ let playerScore=0;
     if (computerScore===1) {
       const result = document.querySelector('div');
       result.textContent = 'First round lost';
+      const score = document.querySelector('.pc')
+      score.textContent= '1'
     }
     else if (computerScore===2) {
       const result = document.querySelector('div');
       result.textContent = 'Another one gone'
+      const score = document.querySelector('.pc')
+      score.textContent= '2'
     }
     else if (computerScore===3) {
       const result = document.querySelector('div');
       result.textContent = 'It is okay. Go for the next one!'
+      const score = document.querySelector('.pc')
+      score.textContent= '3'
     }
     else if (computerScore===4) {
       const result = document.querySelector('div');
       result.textContent = 'Do not let it happen!'
+      const score = document.querySelector('.pc')
+      score.textContent= '4'
     } else {const result = document.querySelector('div');
-            result.textContent ='You lost!';}
+            result.textContent ='You lost!';
+            const score = document.querySelector('.pc')
+            score.textContent= '5'}
   
   } else { playerScore++
     if (playerScore===1) {
       const result = document.querySelector('div');
       result.textContent = 'One down four to go'
+      const plscore = document.querySelector('.player')
+      plscore.textContent = '1'
     }
     else if (playerScore===2) {
       const result = document.querySelector('div');
       result.textContent ='Good job!'
+      const plscore = document.querySelector('.player')
+      plscore.textContent = '2'
     }
     else if (playerScore===3) {
       const result = document.querySelector('div');
       result.textContent = 'Come on. You got this'
+      const plscore = document.querySelector('.player')
+      plscore.textContent = '3'
     }
     else if(playerScore===4) {
       const result = document.querySelector('div');
       result.textContent = 'Matchpoint'
+      const plscore = document.querySelector('.player')
+      plscore.textContent = '4'
     } else {const result = document.querySelector('div');
-            result.textContent ='You win!!';}
+            result.textContent ='You win!!';
+            const plscore = document.querySelector('.player')
+            plscore.textContent = '5'}
     };
   };
-  
 
 
   
