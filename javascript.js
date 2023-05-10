@@ -1,6 +1,34 @@
+  const buttons = document.createElement('div');
+  buttons.classList.add('buttons');
+
+  const rock = document.createElement('button');
+  rock.classList.add('rock');
+  rock.textContent = 'rock';
+  buttons.appendChild(rock);
+
+  const paper = document.createElement('button');
+  paper.classList.add('paper');
+  paper.textContent = 'paper';
+  buttons.appendChild(paper);
+
+  const scissors = document.createElement('button');
+  scissors.classList.add('scissors');
+  scissors.textContent = 'scissors';
+  buttons.appendChild(scissors);
+  
+  const body = document.querySelector('body');
+  body.appendChild(buttons);
+
+  buttons.forEach( button => {
+    button.addEventListener('click', playRound)
+  });
+  
+  
+  
   function getPlayerChoice() {
-    return prompt('Enter your Choice' ,'');
+
   }
+    
   let playerSelection;
 
   
@@ -57,11 +85,7 @@
       }
   }
 
- console.log(playRound(playerSelection,computerSelection));
- console.log(playRound(playerSelection,computerSelection));
- console.log(playRound(playerSelection,computerSelection));
- console.log(playRound(playerSelection,computerSelection));
- console.log(playRound(playerSelection,computerSelection));
+
 
  if (computerScore>playerScore) {
   console.log('You lost!');
