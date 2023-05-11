@@ -15,39 +15,39 @@ let playerScore=0;
 
 
 function playRound(playerSelection, computerSelection){
-  playerSelection = this.textContent.toLowerCase();
+  playerSelection = this.textContent;
   console.log(playerSelection);
   computerSelection=getComputerChoice();
   console.log(computerSelection);
-  if (playerSelection===computerSelection.toLowerCase()) {
+  if (playerSelection===computerSelection) {
     const result = document.querySelector('.result');
       result.textContent ='It is a tie';
   }
-  else if ((playerSelection=== 'rock') && (computerSelection=== 'Paper')
-  || (playerSelection=== 'paper') && (computerSelection=== 'Scissors')
-  || (playerSelection=== 'scissors') && (computerSelection=== 'Rock')) 
+  else if ((playerSelection=== 'Rock') && (computerSelection=== 'Paper')
+  || (playerSelection=== 'Paper') && (computerSelection=== 'Scissors')
+  || (playerSelection=== 'Scissors') && (computerSelection=== 'Rock')) 
    { computerScore++
     if (computerScore===1) {
       const result = document.querySelector('.result');
-      result.textContent = 'First round lost';
+      result.textContent = `First round lost. ${computerSelection} beats ${playerSelection}!`;
       const score = document.querySelector('.computer')
       score.textContent= '1'
     }
     else if (computerScore===2) {
       const result = document.querySelector('.result');
-      result.textContent = 'Another one gone'
+      result.textContent = `Another one gone, ${computerSelection} beats ${playerSelection}!`;
       const score = document.querySelector('.computer')
       score.textContent= '2'
     }
     else if (computerScore===3) {
       const result = document.querySelector('.result');
-      result.textContent = 'It is okay. Go for the next one!'
+      result.textContent = `${computerSelection} beats ${playerSelection}! It is okay. Go for the next one!`
       const score = document.querySelector('.computer')
       score.textContent= '3'
     }
     else if (computerScore===4) {
       const result = document.querySelector('.result');
-      result.textContent = 'Do not let it happen!'
+      result.textContent = `${computerSelection} beats ${playerSelection}!, do not let it happen!`
       const score = document.querySelector('.computer')
       score.textContent= '4'
     } else {const result = document.querySelector('.result');
@@ -63,25 +63,25 @@ function playRound(playerSelection, computerSelection){
   } else { playerScore++
     if (playerScore===1) {
       const result = document.querySelector('.result');
-      result.textContent = 'One down four to go'
+      result.textContent = `${playerSelection} beats ${computerSelection}. One down four to go!`
       const plScore = document.querySelector('.player')
       plScore.textContent = '1'
     }
     else if (playerScore===2) {
       const result = document.querySelector('.result');
-      result.textContent ='Good job!'
+      result.textContent =`Good job! ${playerSelection} beats ${computerSelection}.`
       const plScore = document.querySelector('.player')
       plScore.textContent = '2'
     }
     else if (playerScore===3) {
       const result = document.querySelector('.result');
-      result.textContent = 'Come on. You got this'
+      result.textContent = `Come on, you got this! ${playerSelection} beats ${computerSelection}.`
       const plScore = document.querySelector('.player')
       plScore.textContent = '3'
     }
     else if(playerScore===4) {
       const result = document.querySelector('.result');
-      result.textContent = 'Matchpoint'
+      result.textContent = `${playerSelection} beats ${computerSelection}. Matchpoint!`
       const plScore = document.querySelector('.player')
       plScore.textContent = '4'
     } else {const result = document.querySelector('.result');
