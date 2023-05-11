@@ -1,34 +1,3 @@
-const body = document.querySelector('body');
-
-const rock = document.createElement('button');
-rock.classList.add('rock');
-rock.textContent = 'rock';
-body.appendChild(rock);
-
-const paper = document.createElement('button');
-paper.classList.add('paper');
-paper.textContent = 'paper';
-body.appendChild(paper);
-
-const scissors = document.createElement('button');
-scissors.classList.add('scissors');
-scissors.textContent = 'scissors';
-body.appendChild(scissors);
-
-const div = document.createElement('div')
-body.appendChild(div); //here we will see the results
-
-const div2 = document.createElement('div');
-div2.classList.add('player')
-div2.textContent = '0'
-body.appendChild(div2)
-
-const div3 = document.createElement('div')
-div3.classList.add('pc')
-div3.textContent = '0'
-body.appendChild(div3)
-
-
 const buttons = document.querySelectorAll('button');
 buttons.forEach( (button) => {
   button.addEventListener('click', playRound);
@@ -116,30 +85,4 @@ function playRound(playerSelection, computerSelection){
             plscore.textContent = '5'}
     };
   };
-
-
-  
-  
-  
-
-
-  
-  
-  
-     
-  
-     
-  
-  
-  
-  
-  
-
-   
-
-   
-
-
-
-
 
