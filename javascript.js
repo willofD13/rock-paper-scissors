@@ -53,36 +53,41 @@ function playRound(playerSelection, computerSelection){
     } else {const result = document.querySelector('.result');
             result.textContent ='You lost!';
             const score = document.querySelector('.computer')
-            score.textContent= '5'}
+            score.textContent= '0'
+            const plScore = document.querySelector('.player')
+            plScore.textContent ='0'
+            computerScore=0
+            playerScore=0
+          }
   
   } else { playerScore++
     if (playerScore===1) {
       const result = document.querySelector('.result');
       result.textContent = 'One down four to go'
-      const plscore = document.querySelector('.player')
-      plscore.textContent = '1'
+      const plScore = document.querySelector('.player')
+      plScore.textContent = '1'
     }
     else if (playerScore===2) {
       const result = document.querySelector('.result');
       result.textContent ='Good job!'
-      const plscore = document.querySelector('.player')
-      plscore.textContent = '2'
+      const plScore = document.querySelector('.player')
+      plScore.textContent = '2'
     }
     else if (playerScore===3) {
       const result = document.querySelector('.result');
       result.textContent = 'Come on. You got this'
-      const plscore = document.querySelector('.player')
-      plscore.textContent = '3'
+      const plScore = document.querySelector('.player')
+      plScore.textContent = '3'
     }
     else if(playerScore===4) {
       const result = document.querySelector('.result');
       result.textContent = 'Matchpoint'
-      const plscore = document.querySelector('.player')
-      plscore.textContent = '4'
+      const plScore = document.querySelector('.player')
+      plScore.textContent = '4'
     } else {const result = document.querySelector('.result');
             result.textContent ='You win!!';
-            const plscore = document.querySelector('.player')
-            plscore.textContent = '5'}
+            const plScore = document.querySelector('.player')
+            plScore.textContent = '5'}
     };
   };
 
