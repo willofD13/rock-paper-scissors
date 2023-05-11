@@ -87,7 +87,12 @@ function playRound(playerSelection, computerSelection){
     } else {const result = document.querySelector('.result');
             result.textContent ='You win!!';
             const plScore = document.querySelector('.player')
-            plScore.textContent = '5'}
+            plScore.textContent = '0'
+            const score = document.querySelector('.computer')
+            score.textContent ='0'
+            computerScore=0
+            playerScore=0
+          }
     };
   };
 
