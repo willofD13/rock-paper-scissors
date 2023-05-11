@@ -15,13 +15,13 @@ let playerScore=0;
 
 
 function playRound(playerSelection, computerSelection){
-  playerSelection = this.textContent ;
+  playerSelection = this.textContent.toLowerCase();
   console.log(playerSelection);
   computerSelection=getComputerChoice();
   console.log(computerSelection);
   if (playerSelection===computerSelection.toLowerCase()) {
     const result = document.querySelector('.result');
-      result.textContent ='it is a tie';
+      result.textContent ='It is a tie';
   }
   else if ((playerSelection=== 'rock') && (computerSelection=== 'Paper')
   || (playerSelection=== 'paper') && (computerSelection=== 'Scissors')

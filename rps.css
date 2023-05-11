@@ -32,3 +32,24 @@ button {
 button:hover {
     scale: 1.2;
 }
+
+.player,
+.computer {
+    color: aliceblue;
+    text-align: center;
+}
+
+.result {
+    color: aliceblue;
+    text-align: center;
+    font-size: x-large;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.scoreBoard {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    font-size: 50px;
+}
